@@ -6,23 +6,27 @@
       Toggle extra text
     </button> -->
     <mat-list>
-      <div mat-header>Menu</div>
-      <mat-list-item>
+      <div mat-header [ngSwitch]="menu">Menu</div>
+      <mat-list-item (click)="today = true; tasks = false; important = false">
         <mat-icon>wb_sunny</mat-icon>Today 
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item (click)="tasks = true; today = false; important = false">
         <mat-icon mat-list-icon>assignment</mat-icon>Tarefas
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item (click)="today = false; tasks = false; important = true">
         <mat-icon>grade</mat-icon>Important
       </mat-list-item>
     </mat-list>
   </mat-drawer>
 
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
+
   <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+    <app-important *ngIf="important"></app-important>
+    <app-tasks *ngIf="tasks"></app-tasks>
+    <app-today *ngIf="today"></app-today>>
   </div>
 
 </mat-drawer-container>

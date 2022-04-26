@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ToDoList';
   showFiller = false;
+  menu = "menu";
+  tasks = false
+  today = true;
+  important = false;
 }
