@@ -1,10 +1,5 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <!-- <p>Auto-resizing sidenav</p> 
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button> -->
     <mat-list>
       <div mat-header>Menu</div>
       <mat-list-item routerLink="/today">
@@ -28,11 +23,6 @@
 
   <div class="example-sidenav-content">
     <router-outlet></router-outlet>
-   <!--
-    <app-important *ngIf="important"></app-important>
-    <app-tasks *ngIf="tasks"></app-tasks>
-    <app-today *ngIf="today"></app-today>
-   --> 
   </div>
 
 </mat-drawer-container>

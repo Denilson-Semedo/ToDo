@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ImportantComponent } from './important/important.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { TodayComponent } from './today/today.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TodayComponent } from './today/today.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

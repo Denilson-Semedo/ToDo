@@ -12,4 +12,5 @@ export class AppComponent {
   tasks = false
   today = true;
   important = false;
+  color= "blue";
 }
