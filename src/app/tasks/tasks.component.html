@@ -1,1 +1,11 @@
-<p>tasks works!</p>
+
+<h1>{{title}}</h1>
+<input type="text" placeholder="Add new task" #task/>
+<br>
+<br>
+<button (click)="addTask(task.value)">Add</button>
+<br>
+<br>
+<ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="delTask(item.id)">Delete</button> </li>
+</ul>

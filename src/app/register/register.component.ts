@@ -1,4 +1,6 @@
+import { AuthService } from './../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor() { }
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  hide = true;
+  
+  constructor(
+    public authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }

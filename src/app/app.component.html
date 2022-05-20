@@ -1,28 +1,2 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-list>
-      <div mat-header>Menu</div>
-      <mat-list-item routerLink="/today">
-        <mat-icon>wb_sunny</mat-icon>Today 
-      </mat-list-item>
+<router-outlet></router-outlet>
 
-      <mat-list-item routerLink="/tasks">
-        <mat-icon mat-list-icon>assignment</mat-icon>Tarefas
-      </mat-list-item>
-
-      <mat-list-item routerLink="/important">
-        <mat-icon>grade</mat-icon>Important
-      </mat-list-item>
-
-    </mat-list>
-  </mat-drawer>
-
-  <button type="button" mat-button (click)="drawer.toggle()">
-    Toggle sidenav
-  </button>
-
-  <div class="example-sidenav-content">
-    <router-outlet></router-outlet>
-  </div>
-
-</mat-drawer-container>
