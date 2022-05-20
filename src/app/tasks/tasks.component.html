@@ -1,11 +1,21 @@
+<div id="task">
+    <div id="title">
+        <img src="../../assets/file-text-outline.svg" alt="File Text Icon"> 
+        <h1>Tarefas</h1>
+    </div>
 
-<h1>{{title}}</h1>
-<input type="text" placeholder="Add new task" #task/>
-<br>
-<br>
-<button (click)="addTask(task.value)">Add</button>
-<br>
-<br>
-<ul *ngFor="let item of list">
-    <li>{{item.name}} <button (click)="delTask(item.id)">Delete</button> </li>
-</ul>
+    <div id="add">
+        <input type="text" placeholder="Add new task" #task>
+        <button (click)="addTask(task.value)">Add</button>
+    </div>
+
+    <ul *ngFor="let item of list">
+        <li>
+            {{item.name}}
+            <div id="actions">
+                <img (click)="addFav(item.id)" src="../../assets/star-outline.svg" alt="star-outline" width="24px">
+                <img (click)="delTask(item.id)" src="../../assets/trash-2-outline.svg" alt="trash_Icon" width="24px">
+            </div>
+        </li>
+    </ul>
+</div>

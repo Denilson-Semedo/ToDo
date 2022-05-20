@@ -18,6 +18,11 @@ export class TasksComponent implements OnInit {
     this.list=this.list.filter(item=>item.id!==id);
   }
 
+  addFav(id:number){
+    //this.list=this.list.filter(item=>item.id!==id);
+    
+  }
+
   constructor() { }
 
   ngOnInit(): void {
