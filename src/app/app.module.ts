@@ -6,6 +6,8 @@ import { ImportantComponent } from './important/important.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { TodayComponent } from './today/today.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { MainComponent } from './main/main.component';
 
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
@@ -28,8 +30,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
-import { RegisterComponent } from './register/register.component';
-import { MainComponent } from './main/main.component';
+
+
 
 @NgModule({
   declarations: [

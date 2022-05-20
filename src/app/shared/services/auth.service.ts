@@ -1,15 +1,13 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from '../services/user';
+import { User } from './user';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import {
-  AngularFirestore,
-  AngularFirestoreDocument,
-} from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthService {
   userData: any; // Save logged in user data
   constructor(
@@ -52,7 +50,7 @@ export class AuthService {
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
-        this.SendVerificationMail();
+        //this.SendVerificationMail();
         this.SetUserData(result.user);
       })
       .catch((error) => {
@@ -115,8 +113,6 @@ export class AuthService {
     const userData: User = {
       uid: user.uid,
       email: user.email,
-      Name: user.Name,
-      emailVerified: user.emailVerified,
     };
     return userRef.set(userData, {
       merge: true,

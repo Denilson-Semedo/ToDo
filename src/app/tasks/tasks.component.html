@@ -5,16 +5,16 @@
     </div>
 
     <div id="add">
-        <input type="text" placeholder="Add new task" #task>
+        <input type="text" placeholder="Add new task" [(ngModel)]="task.name" #task>
         <button (click)="addTask(task.value)">Add</button>
     </div>
 
-    <ul *ngFor="let item of list">
+    <ul *ngFor="let item of tasks">
         <li>
             {{item.name}}
             <div id="actions">
-                <img (click)="addFav(item.id)" src="../../assets/star-outline.svg" alt="star-outline" width="24px">
-                <img (click)="delTask(item.id)" src="../../assets/trash-2-outline.svg" alt="trash_Icon" width="24px">
+                <img src="../../assets/star-outline.svg" alt="star-outline" width="24px">
+                <img (click)= "delTask(item)" src="../../assets/trash-2-outline.svg" alt="trash_Icon" width="24px">
             </div>
         </li>
     </ul>
